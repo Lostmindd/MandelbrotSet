@@ -1,11 +1,14 @@
 #include <iostream>
 
+#include <Windows.h>
 #include <SDL.h>
 
 const int WIDTH = 800, HEIGHT = 600;
 
 int main(int argc, char* argv[])
 {
+    ::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+
     SDL_Init(SDL_INIT_EVERYTHING);
 
     SDL_Window* window = SDL_CreateWindow("window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIDTH, HEIGHT, SDL_WINDOW_ALLOW_HIGHDPI);
